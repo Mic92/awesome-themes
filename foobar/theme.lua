@@ -3,6 +3,7 @@ foobar is derived from foo, a high contrast awesome3 theme, by rob
 changeset compared to the origin:
     - default sans font
     - archlinux blue and a decent white as focus colors
+    - wider menu (just my personal preference)
 --]]
 
 --{{{ Main
@@ -19,11 +20,11 @@ end
 sharedicons   = shared .. "/icons"
 sharedthemes  = shared .. "/themes"
 themes        = config .. "/themes"
-themename     = "/foo"
+themename     = "/foobar"
 if not awful.util.file_readable(themes .. themename .. "/theme.lua") then
        themes = sharedthemes
 end
-themedir      = themes .. themename
+themedir      = config .. "/awesome-themes" .. themename
 
 wallpaper1    = themedir .. "/background.jpg"
 wallpaper2    = themedir .. "/background.png"
@@ -71,7 +72,7 @@ theme.titlebar_close_button_focus  = sharedthemes .. "/default/titlebar/closer.p
 
 theme.menu_submenu_icon = sharedthemes .. "/default/submenu.png"
 theme.menu_height   = 15
-theme.menu_width    = 150
+theme.menu_width    = 130
 
 theme.awesome_icon = sharedicons .. "/awesome16.png"
 
